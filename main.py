@@ -972,7 +972,7 @@ async def websocket_endpoint(websocket: WebSocket):
         if websocket in ACTIVE_CONNECTIONS:
             ACTIVE_CONNECTIONS.remove(websocket)
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
+#app.mount("/static", StaticFiles(directory="static"), name="static")
 
 @app.get("/")
 async def get_index():
