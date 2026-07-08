@@ -976,5 +976,4 @@ async def websocket_endpoint(websocket: WebSocket):
 
 @app.get("/")
 async def get_index():
-    with open("static/index.html", "r", encoding="utf-8") as f:
-        return HTMLResponse(content=f.read())
+    return {"status": "backend is running", "message": "Transit stream active"}
